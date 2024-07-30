@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whatsapp via Message | MAH Coder</title>
+    <link rel="stylesheet" href="whatsapp.css">
+</head>
+<body>
+  <body>
+    <header>
+        <nav>
+            <img src="favicon.png" alt="MAH Coder's Logo">
+            <h2>
+                <a href="alihusnain-dev.github.io/portfolio">MAH Coder</a>
+            </h2>
+        </nav>
+    </header>
+    <form>
+      <h1>Send Data To WhatsApp</h1>
+      <label for="">Name</label>
+      <input type="text" class="name">
+
+      <label for="">Email</label>
+      <input type="text" class="email">
+
+      <label for="">Country</label>
+      <input type="text" class="country">
+
+      <label for="">Message</label>
+      <textarea style="resize: none;" rows="5" class="message"></textarea>
+      <button type="button" onclick="sendwhatsapp();">Send Via WhatsApp</button>
+    </form>
+
+    <script>
+      function sendwhatsapp(){
+       var phonenumber = "+923074681469"; 
+
+       var name = document.querySelector(".name").value;
+       var email = document.querySelector(".email").value;
+       var country = document.querySelector(".country").value;
+       var message = document.querySelector(".message").value;
+
+       var url = "https://wa.me/" + phonenumber + "?text="
+       +"Name : "+name+"%0a"
+       +"Email : "+email+"%0a"
+       +"Country: "+country+"%0a"
+       +"Message : "+message
+       +"%0a%0a"
+       +"This is an example of send HTML form data to WhatsApp";
+
+       window.open(url, '_blank').focus();
+     }
+    </script>
+  </body>
+</html>
+
+<!-- Send message from HTML form to you whatsapp-->
+    <marquee behavior="scroll">Sent info on Whatsapp as a Chat Web Developed by:   Muhammad Ali Husnain - @alihusnain_dev   |   MAH Coder - @MAHCoder   |   Copyright © 2024 by MAH Coder ® | All Rights Reserved.</marquee>
