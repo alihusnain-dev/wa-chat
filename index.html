@@ -27,10 +27,7 @@
 
       <label for="">Country</label>
       <input type="text" class="country">
-        <div class="input file">
-            <label for="file">Attach Image</label>
-            <input type="file" name="file" required class="img">
-        </div>
+        
       <label for="">Message</label>
       <textarea style="resize: none;" rows="5" class="message"></textarea>
       <button type="button" onclick="sendwhatsapp();">Send Via WhatsApp</button>
@@ -43,14 +40,12 @@
        var name = document.querySelector(".name").value;
        var email = document.querySelector(".email").value;
        var country = document.querySelector(".country").value;
-          var img = document.querySelector(".img").value;
        var message = document.querySelector(".message").value;
 
        var url = "https://wa.me/" + phonenumber + "?text="
        +"Name : "+name+"%0a"
        +"Email : "+email+"%0a"
        +"Country: "+country+"%0a"
-       +"Image: "+img+""
        +"Message : "+message
        +"%0a%0a"
        +"This is an example of send HTML form data to WhatsApp";
